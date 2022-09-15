@@ -1,25 +1,30 @@
 #include <stdio.h>
-
 /**
- * main - fizzbuzz test
- * Return: 0 if successful
- */
-
+* main - entry block
+* @void: no argument
+* Return: 0 Success
+*/
 int main(void)
 {
-	int x;
+	int i;
 
-	for (x = 1; x < 101; x++)
-	{
-		if (x % 15 == 0)
+	for (i = 1; i < 100; i++)
+		if (i % 15 == 0)
+		{
 			printf("FizzBuzz ");
-		else if (x % 5 == 0)
+		}
+		else if (i % 5 == 0)
+		{
 			printf("Buzz ");
-		else if (x % 3 == 0)
+		}
+		else if (i % 3 == 0)
+		{
 			printf("Fizz ");
+		}
 		else
-			printf("%d ", x);
-	}
+		{
+			printf("%d ", i);
+		}
 	printf("Buzz\n");
 	return (0);
 }
