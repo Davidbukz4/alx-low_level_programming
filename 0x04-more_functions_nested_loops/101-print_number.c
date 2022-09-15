@@ -1,34 +1,38 @@
-#include "main.h"
-
-void print(unsigned int n);
-
+#include "holberton.h"
 /**
- * print_number - print number
- * @var: variable to be printed
- *
- * Created by: Sanctus-Peter
- * cc: 7th july, 2022
- *
+ * print_number - prints a number
+ * @n: Input number
  */
-void print_number(int var)
+
+void print_number(int n)
 {
-	if (var < 0)
+	long len, res, i, temp, expo;
+
+	res = n;
+	expo = len =  1;
+/*Check negatives*/
+	if (res < 0)
 	{
+		res *= -1;
 		_putchar('-');
-		var = -var;
 	}
 
-	print(var);
-}
+/**/
+	temp = res;
+	while (temp >= 10)
+	{
+		len++;
+		temp /= 10;
+	}
 
-/**
- * print - subfunction to print recursively
- * @n: variable to be printed
- */
-
-void print(unsigned int n)
-{
-	if (n / 10)
-		print(n / 10);
-	_putchar('0' + n % 10);
+/*Create Exponent*/
+	for (i = 1; i < len; i++)
+		expo *= 10;
+/*Main */
+	while (expo > 1)
+	{
+		_putchar((res / expo) % 10 + '0');
+		expo /= 10;
+	}
+	_putchar(res % 10 + '0');
 }
