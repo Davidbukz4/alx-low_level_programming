@@ -14,7 +14,7 @@ void print_number(int var)
 {
 	if (var < 0)
 	{
-		_putchar(' ');
+		_putchar('-');
 		var = -var;
 	}
 
