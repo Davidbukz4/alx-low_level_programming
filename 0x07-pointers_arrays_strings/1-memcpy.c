@@ -1,5 +1,3 @@
-#include "main.h"
-
 /**
  * _memcpy - copies memory area
  * @dest: where bytes are copied to
