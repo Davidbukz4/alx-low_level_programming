@@ -26,5 +26,5 @@ int check_number(int n, int base)
 
 int is_prime_number(int n)
 {
-	return (checker_number(2, n));
+	return (check_number(2, n));
 }
