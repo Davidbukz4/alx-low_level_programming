@@ -14,7 +14,7 @@ int check_number(int n, int base)
 	else if (n == base - 1)
 		return (1);
 	else if (base > n)
-		return (checker(n + 1, base));
+		return (check_number(n + 1, base));
 	return (1);
 }
 
