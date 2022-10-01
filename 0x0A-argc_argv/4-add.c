@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 	if (argc < 1)
 	{
 		printf("%d\n", 0);
-		return;
+		return (0);
 	}
 	while (argc-- && argc > 0)
 	{
