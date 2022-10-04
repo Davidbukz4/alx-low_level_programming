@@ -11,7 +11,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *ptr;
-	unsigned int x, y, s1_len, s2_len;
+	unsigned int x, array_size, s1_len, s2_len;
 
 	if (s1 == NULL)
 		s1 = "";
