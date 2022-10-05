@@ -3,24 +3,25 @@
 #include <time.h>
 
 /**
- * main - Entry point
+ * main - generates keygen
  * Return: 0
  */
 
 int main(void)
 {
-	int randNum;
-	int count;
-	int total;
+	int passwd, key_checker;
+	time_t t;
 
-	srand(time(NULL));
-	for (count = 0;  total > 122 && total <2772; count++)
+	passwd = key_checker = 0;
+	srand((unsigned int) time(&t));
+	while (passwd < 2772)
 	{
-		randNum = (rand() % 125) + 1;
-		printf("%c",randNum);
-		total -= randNum;
+		passwd = rand() % 128;
+		if ((key_checker + passwd) > 2772)
+			break;
+		key_checker += passwd;
+		printf("%c", passwd);
 	}
-	printf("%c", total);
-
+	printf("%c\n", (2772 - key_checker));
 	return (0);
 }
