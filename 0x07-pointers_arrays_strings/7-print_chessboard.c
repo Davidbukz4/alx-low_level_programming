@@ -3,23 +3,23 @@
 /**
  * print_chessboard - prints the chessboard
  * @a: the board to print
+ * Return: void
  */
 
 void print_chessboard(char (*a)[8])
 {
-	int i, j;
+	unsigned int i, j;
 
 	i = j = 0;
-	while (i < *a)
+	while (i < 64)
 	{
-		j = 0;
-		while (j < 8)
+		if (i % 8 == 0 && i != 0)
 		{
-			_putchar(a[i][j]);
-			j++;
+			j = i;
+			_putchar('\n');
 		}
-		_putchar('\n');
+		_putchar(a[i / 8][i - j]);
 		i++;
 	}
-
+	_putchar('\n');
 }
