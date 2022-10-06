@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * print_chessboard - prints the chessboard
@@ -11,7 +11,7 @@ void print_chessboard(char (*a)[8])
 	unsigned int i, j;
 
 	i = j = 0;
-	while (a[i][7])
+	while (i < 8)
 	{
 		while (j < 8)
 		{
