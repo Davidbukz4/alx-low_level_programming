@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdlib.h>
 
 /**
@@ -10,32 +11,29 @@
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	char *mem1, *cast_mem;
-	int x;
+	char *p, *castptr;
+	unsigned int i;
 
 	if (ptr != NULL && new_size == 0)
 	{
 		free(ptr);
 		return (NULL);
 	}
-
 	if (new_size == old_size)
 		return (ptr);
-
 	if (ptr == NULL)
 	{
-		mem1 = malloc(new_size);
-		return (mem1);
+		p = malloc(new_size);
+		return (p);
 	}
-
 	if (new_size > old_size)
 	{
-		mem1 = malloc(new_size * sizeof(char));
-		cast_mem = ptr;
-		for (x = 0; x < old_size; x++)
-			mem1[x] = cast_mem[x];
+		p = malloc(new_size * sizeof(char));
+		castptr = ptr;
+		for (i = 0; i < old_size; i++)
+			p[i] = castptr[i];
 		free(ptr);
-		return (mem1);
+		return (p);
 	}
 	return (ptr);
 }
