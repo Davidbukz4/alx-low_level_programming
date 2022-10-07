@@ -1,6 +1,6 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
-#include <stdio.h>
 
 /**
  * _isdigit - checks if the string consist of digits
@@ -60,7 +60,6 @@ int main(int argc, char *argv[])
 
 	b = 1;
 
-	malloc();
 	if (argc != 3)
 	{
 		printf("Error\n");
