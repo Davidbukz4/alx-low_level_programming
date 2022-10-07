@@ -18,9 +18,9 @@ int _isdigit(char *argv)
 		if (argv[x] >= '0' && argv[x] <= '9')
 			x++;
 		else
-			return (1);
+			return (0);
 	}
-	return (0);
+	return (1);
 }
 
 /**
@@ -70,8 +70,8 @@ int main(int argc, char *argv[])
 	{
 		if (_isdigit(argv[a]))
 		{
-			b = _atoi(argv[a]);
-			b *= b;
+			c = _atoi(argv[a]);
+			b *= c;
 		}
 		else
 		{
