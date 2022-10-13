@@ -1,5 +1,5 @@
 #ifndef _VARIADIC_FUNCTIONS_
-#define _VARIADIC_FUNCTION_
+#define _VARIADIC_FUNCTIONS_
 
 #include <stdarg.h>
 #define VALIDDATATYPES(i) (format[i] == 'c' || format[i] == 'i' || format[i] == 'f' || format[i] == 's')
