@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #include "3-calc.h"
 
+/**
+ * main - performs an operation on two numbers
+ * @argc: number of command line arguments
+ * @argv: argument vector
+ * Return: 0 if successful
+ */
+
 int main(int argc, char *argv[])
 {
 	int value1, value2;
@@ -11,7 +18,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	
+
 	value1 = atoi(argv[1]);
 	value2 = atoi(argv[3]);
 
@@ -27,6 +34,6 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 
-	printf("%d\n", (get_op_func(argv[2])(value1,value2)));
+	printf("%d\n", (get_op_func(argv[2])(value1, value2)));
 	return (0);
 }
