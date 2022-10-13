@@ -12,6 +12,8 @@ typedef struct op
 	int (*f)(int a, int b);
 } op_t;
 
+#include <stdlib.h>
+
 int op_add(int a, int b);
 int op_sub(int a, int b);
 int op_mul(int a, int b);
