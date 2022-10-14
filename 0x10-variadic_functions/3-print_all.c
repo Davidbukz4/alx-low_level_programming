@@ -36,6 +36,7 @@ void _float(va_list f)
 void _string(va_list s)
 {
 	char *str;
+
 	str = va_arg(s, char *);
 	if (str == NULL)
 		str = "(nil)";
@@ -52,6 +53,7 @@ void print_all(const char * const format, ...)
 {
 	char *separator;
 	unsigned int i, j;
+
 	va_list arg_list;
 	data_type arg_type[] = {
 		{"c", _char},
