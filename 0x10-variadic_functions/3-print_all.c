@@ -56,10 +56,10 @@ void print_all(const char * const format, ...)
 
 	va_list arg_list;
 	data_type arg_type[] = {
-		{'c', _char},
-		{'i', _int},
-		{'f', _float},
-		{'s', _string}
+		{"c", _char},
+		{"i", _int},
+		{"f", _float},
+		{"s", _string}
 	};
 
 	i = j = 0;
