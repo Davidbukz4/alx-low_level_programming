@@ -71,7 +71,7 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (j < 4)
 		{
-			if (format[i] == *arg_type[j].valid)
+			if (format[i] == arg_type[j].valid)
 			{
 				printf("%s", separator);
 				arg_type[j].func(arg_list);
