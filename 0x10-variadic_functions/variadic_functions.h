@@ -2,8 +2,6 @@
 #define _VARIADIC_FUNCTIONS_
 
 #include <stdarg.h>
-#define VALIDDATATYPES(i) (format[i] == 'c' || format[i] == 'i' || \
-format[i] == 'f' || format[i] == 's')
 
 /**
  * struct valid_data_types - name of structure
