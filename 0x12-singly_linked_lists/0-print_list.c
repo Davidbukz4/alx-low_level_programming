@@ -10,7 +10,8 @@ size_t print_list(const list_t *h)
 {
 	unsigned int count;
 
-	while (h != NULL)
+	count = 0;
+	while (h->n != NULL)
 	{
 		if (h->str == NULL)
 			printf("[0] (nil)\n");
