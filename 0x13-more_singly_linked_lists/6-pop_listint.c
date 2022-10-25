@@ -10,6 +10,7 @@
 int pop_listint(listint_t **head)
 {
 	listint_t *temp, *currentNode, *saveData;
+	int i = 0;
 
 	if (*head == NULL)
 		return (0);
@@ -17,13 +18,14 @@ int pop_listint(listint_t **head)
 	temp = currentNode = saveData = *head;
 	if (*head)
 	{
+		i = saveData->n;
 		*head = currentNode->next;
 		free(temp);
 	}
 	else
 	{
-		saveData->n = 0;
+		i = 0;
 	}
 
-	return (saveData->n);
+	return (i);
 }
