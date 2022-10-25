@@ -12,8 +12,6 @@ size_t print_listint_safe(const listint_t *head)
 	long int addr_diff;
 
 	count = 0;
-	if (!head)
-		exit(98);
 	while (head)
 	{
 		addr_diff = head - head->next;
