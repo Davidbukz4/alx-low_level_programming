@@ -11,7 +11,7 @@ size_t print_listint_safe(const listint_t *head)
 	unsigned int count;
 	long int addr_diff;
 
-	count = 0;
+	count = addr_diff = 0;
 	while (head)
 	{
 		addr_diff = head - head->next;
