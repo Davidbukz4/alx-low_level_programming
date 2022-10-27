@@ -11,9 +11,9 @@ int set_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned long int compare;
 
+	compare = 1;
 	if (n)
 	{
-		compare = 1;
 		compare = compare << index;
 		*n = *n | compare;
 		return (1);
