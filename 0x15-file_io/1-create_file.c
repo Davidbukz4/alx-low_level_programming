@@ -20,10 +20,7 @@ int create_file(const char *filename, char *text_content)
 	if (fd == -1)
 		return (-1);
 	if (!text_content)
-	{
-		close(fd);
-		return (-1);
-	}
+		text_content = "";
 
 	for (f_len = 0; text_content[f_len]; f_len++)
 		;
