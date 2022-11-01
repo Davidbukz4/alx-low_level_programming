@@ -21,7 +21,10 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 
 	if (!text_content)
-		text_content = "";
+	{
+		close(fd);
+		return(1);
+	}
 	for (f_len = 0; text_content[f_len]; f_len++)
 		;
 
