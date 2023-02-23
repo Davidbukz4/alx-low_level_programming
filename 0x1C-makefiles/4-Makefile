@@ -1,4 +1,4 @@
-CLAGS = -Wall -Werror -Wextra -pedantic
+CFLAGS = -Wall -Werror -Wextra -pedantic
 CC = gcc
 SRC = main.c school.c
 OBJ = $(SRC:%.c=%.o)
