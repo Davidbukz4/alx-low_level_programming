@@ -1,14 +1,14 @@
 #include "search_algos.h"
 
 /**
- * binary_recursion - searches for a value in a sorted array of integers
+ * advanced_recursion - searches for a value in a sorted array of integers
  * @array: pointer to the first element of the array to search in
  * @size: number of elements in an array
  * @value: value to search for
  * Return: first index where value is located, -1 otherwise
  */
 
-int binary_recursion(int *array, size_t size, int value)
+int advanced_recursion(int *array, size_t size, int value)
 {
 	size_t mid = size / 2, i;
 
@@ -24,18 +24,18 @@ int binary_recursion(int *array, size_t size, int value)
 	if (value == array[mid])
 	{
 		if (mid > 0)
-			return binary_recursion(array, mid + 1, value);
+			return (advanced_recursion(array, mid + 1, value));
 		return (mid);
 	}
 	if (value < array[mid])
-		return (binary_recursion(array, mid + 1, value));
+		return (advanced_recursion(array, mid + 1, value));
 	mid++;
-	return (binary_recursion(array + mid, size - mid, value) + mid);
+	return (advanced_recursion(array + mid, size - mid, value) + mid);
 }
 
 
 /**
- * binary_search - searches for a value in a sorted array of integers
+ * advanced_binary - searches for a value in a sorted array of integers
  * @array: pointer to the first element of the array to search in
  * @size: number of elements in an array
  * @value: value to search for
@@ -45,7 +45,7 @@ int advanced_binary(int *array, size_t size, int value)
 {
 	int resp = 0;
 
-	resp = binary_recursion(array, size, value);
+	resp = advanced_recursion(array, size, value);
 	if (resp >= 0 && array[resp] != value)
 		return (-1);
 	return (resp);
